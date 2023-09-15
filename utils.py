@@ -27,5 +27,6 @@ class exp_pi_i():
         self.radian = self.radian.negative()
 
 
-exp_pi_i_zero = exp_pi_i(0, 0)
-exp_pi_i_plus_one = exp_pi_i(0, 1)
+zero = exp_pi_i(0, 0)
+plus_one = exp_pi_i(0, 1)
+minus_one = exp_pi_i(0, -1)
