@@ -1,12 +1,43 @@
 import math
 
+class frac():
+
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
+        self.modify_sign(self)
+
+    def modify_sign(self):
+        if self.numerator < 0 and self.denominator < 0:
+            self.numerator = -self.numerator
+            self.denominator = -self.denominator
+
+    def negative(self):
+        self.numerator = -self.numerator
+        self.modify_sign(self)
+
+
+class exp_pi_i():
+
+    def __init__(self, radian:frac, pm):
+        self.radian = radian
+        self.pm = pm
+
+    def conjugate(self):
+        self.radian = self.radian.negative()
+        
+
+# =======================
+# real and compelx number
+# =======================
+
 class real_num():
 
     def __init__(self, c, sqrts):
         self.c = c
         self.sqrts = sqrts
 
-    def calculate():
+    def calculate(self):
         return self.c * math.sqrt(self.sqrts)
 
 
@@ -30,14 +61,10 @@ def real_multiply(x1: real_num, x2: real_num) -> real_num:
                 x2_temp.remove(sqrt2)
                 extract *= sqrt2
                 break
-    return real_num(x1.c*x2*c*extract, x1_temp+x2_temp)
+    return real_num(x1.c*x2.c*extract, x1_temp+x2_temp)
 
 
 def complex_multiply(x1: complex_num, x2: complex_num) -> complex_num:
-    x1.real_part = a
-    x1.complex_part = b
-    x2.real_part = c
-    x2.complex_part = d
     return complex_num()
 
 
