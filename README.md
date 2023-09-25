@@ -98,3 +98,15 @@ And we get
 [-1.5  0.   0.   1.5]
 [0.  1.5 1.5 0. ]
 ```
+
+$$
+\begin{aligned}
+P_R\left[\left(\varphi^{e_x}, \varphi^{e_y}\right) \otimes\left(\phi^{e_x}, \phi^{e_y}\right)\right] & =\left(P_R \varphi^{e_x}, P_R \varphi^{e_y}\right) \otimes\left(P_R \phi^{e_x}, P_R \phi^{e_y}\right) \\
+& =P_R \otimes P_R\left(\varphi^{e_x} \otimes \phi^{e_x}, \varphi^{e_x} \otimes \phi^{e_y}, \varphi^{e_y} \otimes \phi^{e_x}, \varphi^{e_y} \otimes \phi^{e_y}\right) \\
+& =P_R \otimes P_R\left(\varphi^{e_x} \phi^{e_x}, \varphi^{e_x} \phi^{e_y}, \varphi^{e_y} \phi^{e_x}, \varphi^{e_y} \phi^{e_y}\right)
+\end{aligned}
+$$
+
+![](https://cdn.mathpix.com/snip/images/m5VUKODwC8e9i-MuVN16JwI5rghQb4ceJg6kBNL20Io.original.fullsize.png)
+
+![](https://cdn.mathpix.com/snip/images/j25mkgOW9WwBvAPcbbHor9xHbrbjmvKMDZ73twYiVwc.original.fullsize.png)
