@@ -41,6 +41,21 @@ for irrep in irreps:
 proj_bond = np.array(proj_bond)
 # print(proj_bond)
 
+# proj_bond_xy = []
+# for irrep in irreps:
+#     if len(irrep[0])==1:
+#         proj_bond_xy.append(irrep.squeeze())
+#     else:
+#         li = len(irrep[0])
+#         for i in range(li):
+#             irrep_i = []
+#             for matrix in irrep:
+#                 print(matrix)
+#                 irrep_i.append(matrix[i][i])
+#             proj_bond_xy.append(irrep_i)
+# proj_bond_xy = np.array(proj_bond_xy)
+# print(proj_bond_xy)
+
 # print(Sigma.T)
 # print(len(A2[0]))
 # print(len(Exy[0]))
@@ -79,7 +94,7 @@ for i in range(len(proj_bond)):
     # print("0"*30)
     bond2spws.append(bond2spw)
 
-print(bond2spws)
+# print(bond2spws)
 # print(bond2spws[0])
 
 e_x = np.array([1,0])
@@ -173,14 +188,37 @@ yy_sys = np.array(yy_sys)
 # print(xy_sys.T)
 # print(yx_sys.T)
 
-multiw2singlew = []
-for i in range(len(proj_bond)):
-    for xx in xx_sys:
-        coeffs = [0 for i in range (num_bonds)]
-        for idj, j in enumerate(s):
-            coeffs[j-1] += proj_bond[i, idj]
-        denominator = np.where(sum(np.abs(coeffs))==0, 1, sum(np.abs(coeffs)))
-        # print(coeffs)
-        coeffs = [float(k)/denominator for k in coeffs]
-        bond2spw.append(coeffs)
-    bond2spws.append(bond2spw)
+irreps = [A1, A2, Exy]
+proj_bond_T = []
+for irrep in irreps:
+    if len(irrep[0])==1:
+        proj_bond_T.append(irrep.squeeze())
+    else:
+        li = len(irrep[0])
+        for i in range(li):
+            irrep_i = []
+            for matrix in irrep:
+                irrep_i.append(sum(matrix[i]))
+            proj_bond_T.append(np.array(irrep_i))
+proj_bond_T = np.array(proj_bond_T)
+
+spw2mpws = []
+
+print(proj_bond_T)
+print(xx_sys.T)
+print("="*50)
+for proj in proj_bond_T:
+    # print("-"*50)
+    # print(np.array(proj))
+    # print(xx_sys)
+    # print("-"*50)
+    print(np.array(proj).dot(xx_sys))
+print("="*50)
+for proj in proj_bond_T:
+    print(np.array(proj).dot(yy_sys))
+print("="*50)
+for proj in proj_bond_T:
+    print(np.array(proj).dot(xy_sys))
+print("="*50)
+for proj in proj_bond_T:
+    print(np.array(proj).dot(yx_sys))
