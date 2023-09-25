@@ -41,7 +41,7 @@ for irrep in irreps:
 proj_bond = np.array(proj_bond)
 # print(proj_bond)
 
-print(Sigma.T)
+# print(Sigma.T)
 # print(len(A2[0]))
 # print(len(Exy[0]))
 
@@ -79,7 +79,7 @@ for i in range(len(proj_bond)):
     # print("0"*30)
     bond2spws.append(bond2spw)
 
-# print(bond2spws)
+print(bond2spws)
 # print(bond2spws[0])
 
 e_x = np.array([1,0])
@@ -168,16 +168,14 @@ for i in range(len(e_x_sy)):
 yy_sys = np.array(yy_sys)
 # print(yx_sy)
 
-print(xx_sys.T)
-print(yy_sys.T)
-print(xy_sys.T)
-print(yx_sys.T)
+# print(xx_sys.T)
+# print(yy_sys.T)
+# print(xy_sys.T)
+# print(yx_sys.T)
 
 multiw2singlew = []
 for i in range(len(proj_bond)):
-    num_bonds = len(Sigma.T)
-    bond2spw = []
-    for s in Sigma.T:
+    for xx in xx_sys:
         coeffs = [0 for i in range (num_bonds)]
         for idj, j in enumerate(s):
             coeffs[j-1] += proj_bond[i, idj]
@@ -185,5 +183,4 @@ for i in range(len(proj_bond)):
         # print(coeffs)
         coeffs = [float(k)/denominator for k in coeffs]
         bond2spw.append(coeffs)
-    # print("0"*30)
     bond2spws.append(bond2spw)
