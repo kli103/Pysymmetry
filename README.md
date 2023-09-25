@@ -2,6 +2,7 @@
 
 ## Representation of Two-Particle Wavefunction
 
+```
 [[ 1.         0.25       0.25       1.         0.25       0.25     ]
  [ 0.        -0.4330127  0.4330127  0.         0.4330127 -0.4330127]
  [ 0.        -0.4330127  0.4330127  0.         0.4330127 -0.4330127]
@@ -21,5 +22,6 @@
  [ 0.        -0.75      -0.75       0.         0.75       0.75     ]
  [ 1.         0.25       0.25      -1.        -0.25      -0.25     ]
  [ 0.        -0.4330127  0.4330127 -0.        -0.4330127  0.4330127]]
+```
 
  ![](https://cdn.mathpix.com/snip/images/719p5GkJw-VUdr1LZSK_89X0YCavGdYaxWTFiSDgGpY.original.fullsize.png)
