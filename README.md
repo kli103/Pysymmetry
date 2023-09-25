@@ -20,6 +20,34 @@ Input is single particle wavefunction data calculated from the last step:
 [[0.0, 0.0, 0.0, 0.0], [0.36602540378443865, 0.13397459621556138, -0.5, 0.0], [-0.36602540378443865, -0.13397459621556138, 0.5, 0.0], [0.0, 0.0, 0.0, 0.0]]
 ```
 
+$$
+\begin{aligned}
+& e_x=\varphi^{e_x}=\mathcal{P}^{E_x} \sigma_1 \\
+& =\frac{2}{6}\left[\begin{array}{c}
+\left(E_{x x}(E) \sigma_1+E_{y x}(E) \sigma_1\right) \\
++\left(E_{x x}\left(C_3\right) \sigma_2+E_{y x}\left(C_3\right) \sigma_2\right) \\
++\left(E_{x x}\left(C_3^{-1}\right) \sigma_3+E_{y x}\left(C_3^{-1}\right) \sigma_3\right) \\
++\left(E_{x x}\left(\sigma_v\right) \sigma_1+E_{y x}\left(\sigma_v\right) \sigma_1\right) \\
++\left(E_{x x}\left(\sigma_v^{\prime}\right) \sigma_3+E_{y x}\left(\sigma_v^{\prime}\right) \sigma_3\right) \\
++\left(E_{x x}\left(\sigma_v^{\prime \prime}\right) \sigma_2+E_{y x}\left(\sigma_v^{\prime \prime}\right) \sigma_2\right)
+\end{array}\right]
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+& e_y=\varphi^{e_y}=\mathcal{P}^{E_y} \sigma_1 \\
+& =\frac{2}{6}\left[\begin{array}{c}
+\left(E_{x y}(E) \sigma_1+E_{y y}(E) \sigma_1\right) \\
++\left(E_{x y}\left(C_3\right) \sigma_2+E_{y y}\left(C_3\right) \sigma_2\right) \\
++\left(E_{x y}\left(C_3^{-1}\right) \sigma_3+E_{y y}\left(C_3^{-1}\right) \sigma_3\right) \\
++\left(E_{x y}\left(\sigma_v\right) \sigma_1+E_{y y}\left(\sigma_v\right) \sigma_1\right) \\
++\left(E_{x y}\left(\sigma_v^{\prime}\right) \sigma_3+E_{y y}\left(\sigma_v^{\prime}\right) \sigma_3\right) \\
++\left(E_{x y}\left(\sigma_v^{\prime \prime}\right) \sigma_2+E_{y y}\left(\sigma_v^{\prime \prime}\right) \sigma_2\right)
+\end{array}\right]
+\end{aligned}
+$$
+
 And we get
 
 ```
